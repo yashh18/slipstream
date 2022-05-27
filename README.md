@@ -8,8 +8,7 @@
 
 Content-Based Recommender System using AJAX which recommends movies similar to the likes of user and analyses the sentiments on the reviews given by the user for that movie.
 
-<!-- space for logo -->
-
+<p align = "center"> <img src = "https://user-images.githubusercontent.com/81583289/170741737-05f353c4-e2ba-4690-b899-5fe278154596.png"> </p>  
 <!-- demo video link with badge -->
 
 This web application provides all the details of the requested movie such as overview, genre, release date, rating, runtime, top cast, reviews, recommended movies, etc.
