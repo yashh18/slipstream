@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SLIPSTREAM</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Auto Complete -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+
+  <!-- External CSS -->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+
+  <script type="text/javascript">
+    var films = {{suggestions|tojson}};
+    $(document).ready(function(){
+      $("#myModal").modal('show');
+    });
+  </script>
+
+</head>
+
+<body id="content" style="font-family: 'Noto Sans JP', sans-serif;">
+  <nav class="navbar" id="navbar">
+
+    <button class="navbar__toggle" id="navbar__toggle">
+      <span class="navbar__toggle--open" data-feather="menu"></span>
+      <span class="navbar__toggle--close display-none" data-feather="x"></span>
+    </button>
+    <div class="navbar__link__container">
+    <a class="navbar__link navbar__link--active" href="/ ">HOME</a>
+    <a class="navbar__link" href="/signin">SignIN/SignUP</a>
+    </div>
+  </nav>
+<div class="body-content">
+    <center><a class="logo" href="/" > <img class="logo" src="static/Slipstream.png" > </a></center>
+    <div class="form-group shadow-textarea" style="margin-top: 30px;text-align: center;color: white;">
+        <input type="text" name="movie" class="movie form-control" id="autoComplete" autocomplete="off" placeholder="Enter the Movie Name" style="background-color: #ffffff;border-color:#ffffff;width: 60%;color: #181818" required="required" />
+        <br>
+    </div>
+
+    <div class="form-group" style="text-align: center;">
+      <button class="btn btn-primary btn-block movie-button" style="background-color: #08b3f5;text-align: center;border-color: #08b3f5;width:120px;" disabled="true" >Enter</button><br><br>
+    </div>
+
+	</div>
+
+  <a href="https://forms.gle/Jk1fqjuxGTfYdBb68" target="_blank" class="feedback"> 
+    <img class="feedback"  src="static/feedback.png" > </a>
+
+  
+
+  <div id="loader" class="text-center">
+  </div>
+  
+  <div class="fail">
+    <center><h3>Sorry! The movie you requested is not in our database. 
+    Please check the spelling or try with other movies!</h3></center>
+  </div>
+
+	<div class="results">
+    <center>
+      <h2 id="name" class="text-uppercase"></h2>
+    </center>
+	</div>
+	
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #08b3f5;color: white;">
+          <h5 class="modal-title" id="exampleModalLabel3">Hey there!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" style="color: white">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Don't worry if the movie that you are looking for is not auto-suggested while typing. Just type the movie name and click on "enter". You will be good to go even though if you made some typo errors.</p>
+        </div>
+        <div class="modal-footer" style="text-align: center;">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Let's go!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  
+	</div>
+    
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='autocomplete.js')}}"></script>
+
+  <script type="text/javascript" src="{{url_for('static', filename='recommend.js')}}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyAM7RuNWStI1JrwRvOYS_r2nq7_G_FqoDo",
+    authDomain: "slipstream-62b14.firebaseapp.com",
+    projectId: "slipstream-62b14",
+    storageBucket: "slipstream-62b14.appspot.com",
+    messagingSenderId: "765628362934",
+    appId: "1:765628362934:web:b4568e4d48741ec17fb617",
+    measurementId: "G-S4GSCS0GK6"
+  };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+const auth = getAuth();
+
+const logout=document.getElementById("logout")
+logout.addEventListener('click',(e)=>{
+
+  signOut(auth).then(() => {
+    // Sign-out successful.
+    window.location.href="./index.html";
+  }).catch((error) => {
+    // An error happened.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+       alert(errorMessage);
+  });
+
+});
+
+</script>
+</html>
