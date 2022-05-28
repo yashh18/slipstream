@@ -18,6 +18,11 @@ This web application provides all the details of the requested movie such as ove
 
 ## Features and Interface
 1. <b>Home page</b> 
+
+- A pop-up shows up on opening the app telling about the auto suggestion feature used for searching the movies
+
+<img width="1440" alt="Screenshot 2022-05-28 at 12 41 12 AM" src="https://user-images.githubusercontent.com/81583289/170824295-0da3e87b-1f6c-499d-83ea-306d4ef92ffd.png">
+
 - Seamless landing page with `Sign IN/Sign UP` page for login
 
 <img width="1440" alt="Screenshot 2022-05-27 at 6 18 04 PM" src="https://user-images.githubusercontent.com/81583289/170768646-956684f3-a4c2-4dba-88f1-6194d78f7f26.png">
@@ -34,9 +39,28 @@ This web application provides all the details of the requested movie such as ove
 
 <img width="1440" alt="Screenshot 2022-05-21 at 3 56 08 PM" src="https://user-images.githubusercontent.com/81583289/170770264-2e9e98fe-72bb-489a-b132-8df960c3b645.png">
 
-## How to get the API key?
+4. <b> Searching the movie </b>
+- Enter the movie's name you want to get recommendations of 
 
-Create an account in https://www.themoviedb.org/, click on the `API` link from the left hand sidebar in your account settings and fill all the details to apply for API key. If you are asked for the website URL, just give "NA" if you don't have one. You will see the API key in your `API` sidebar once your request is approved.
+<img width="1440" alt="Screenshot 2022-05-28 at 5 52 13 PM" src="https://user-images.githubusercontent.com/81583289/170825387-5858da5a-21e9-4b53-8879-cf2db731050b.png">
+
+- The app takes the input of movie and shows all the details of movie like ratings, genre, release date, runtime etc.
+
+<img width="1440" alt="Screenshot 2022-05-28 at 5 52 28 PM" src="https://user-images.githubusercontent.com/81583289/170825401-a9574d6b-c196-48d7-8f42-c5590baaab69.png">
+
+- Shows the top cast of the movie
+
+<img width="1440" alt="Screenshot 2022-05-28 at 5 52 36 PM" src="https://user-images.githubusercontent.com/81583289/170825410-26d9495a-2d27-4406-b0f4-37d92e25a1b3.png">
+
+- It also shows the reviews of the movie which are fetched from IMDb
+
+<img width="1440" alt="Screenshot 2022-05-28 at 5 52 49 PM" src="https://user-images.githubusercontent.com/81583289/170825419-cd05a5fd-7cb7-47af-9ff9-265328f6546d.png">
+
+5. Recommendation 
+
+- The app then finally suggests movies similar to the likes of user 
+
+<img width="1440" alt="Screenshot 2022-05-28 at 5 52 57 PM" src="https://user-images.githubusercontent.com/81583289/170825497-2506fd2e-b463-48e0-901d-1d4bd6741f7a.png">
 
 ## Architecture
 ![architecture](architecture.png)
@@ -58,6 +82,10 @@ More about Cosine Similarity : [Understanding the Math behind Cosine Similarity]
 ## Tools and Languages used
 <p align="left"> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://heroku.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg" alt="heroku" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> </p>
 
+## How to get the API key?
+
+Create an account in https://www.themoviedb.org/, click on the `API` link from the left hand sidebar in your account settings and fill all the details to apply for API key. If you are asked for the website URL, just give "NA" if you don't have one. You will see the API key in your `API` sidebar once your request is approved.
+
 ## How to run the project?
 
 1. Clone this repository in your local system.
@@ -74,3 +102,22 @@ More about Cosine Similarity : [Understanding the Math behind Cosine Similarity]
 3. [List of movies in 2018](https://en.wikipedia.org/wiki/List_of_American_films_of_2018)
 4. [List of movies in 2019](https://en.wikipedia.org/wiki/List_of_American_films_of_2019)
 5. [List of movies in 2020](https://en.wikipedia.org/wiki/List_of_American_films_of_2020)
+
+## Need help?
+
+Feel free to contact me on [LinkedIn](https://www.linkedin.com/in/kataria-yash/) 
+
+[![Instagram](https://img.shields.io/badge/Instagram-follow-purple.svg?logo=instagram&logoColor=white)](https://www.instagram.com/yashkatariaa_) [![Twitter](https://img.shields.io/badge/Twitter-follow-blue.svg?logo=twitter&logoColor=white)](https://twitter.com/yashh18_) 
+
+---------
+
+```javascript
+
+if (youEnjoyed) {
+    starThisRepository();
+}
+
+```
+
+-----------
+
