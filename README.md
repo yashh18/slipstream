@@ -21,55 +21,55 @@ This web application provides all the details of the requested movie such as ove
 
 - A pop-up shows up on opening the app telling about the auto suggestion feature used for searching the movies
 
-<img width="1440" alt="Screenshot 2022-05-28 at 12 41 12 AM" src="https://user-images.githubusercontent.com/81583289/170824295-0da3e87b-1f6c-499d-83ea-306d4ef92ffd.png">
+<img width="1438" alt="Screenshot 2022-05-29 at 7 37 58 PM" src="https://user-images.githubusercontent.com/81583289/170873853-d7e64447-3024-4373-bba1-afef42616c79.png">
 
 - Seamless landing page with `Sign IN/Sign UP` page for login
 
-<img width="1440" alt="Screenshot 2022-05-27 at 6 18 04 PM" src="https://user-images.githubusercontent.com/81583289/170768646-956684f3-a4c2-4dba-88f1-6194d78f7f26.png">
+<img width="1438" alt="Screenshot 2022-05-29 at 7 38 08 PM" src="https://user-images.githubusercontent.com/81583289/170873862-08d65dd7-aec1-4c07-a880-82df00bb5081.png">
 
 2. <b> Feedback form </b>
 - One of the most important part of Agile is feedback, therefore the app has a feedback form in the footer
 
-<img width="1440" alt="Screenshot 2022-05-27 at 6 19 56 PM" src="https://user-images.githubusercontent.com/81583289/170769294-fb2646b0-d376-4f81-b421-52e5e7024fa2.png">
+<img width="1438" alt="Screenshot 2022-05-29 at 7 38 30 PM" src="https://user-images.githubusercontent.com/81583289/170873875-48184464-724e-4851-8811-4141c6f629e0.png">
 
 3. <b> Sign IN/Sign UP page </b>
 - Users can register themselves on the app and login into their accounts using the credentials
 
-<img width="1440" alt="Screenshot 2022-05-27 at 6 19 41 PM" src="https://user-images.githubusercontent.com/81583289/170770203-5e80977f-1c94-49fc-a063-66ee2ba050d8.png">
+<img width="1438" alt="Screenshot 2022-05-29 at 7 39 01 PM" src="https://user-images.githubusercontent.com/81583289/170873931-04e2f68e-dcc6-47a6-9b49-72de05e088da.png">
 
-<img width="1440" alt="Screenshot 2022-05-21 at 3 56 08 PM" src="https://user-images.githubusercontent.com/81583289/170770264-2e9e98fe-72bb-489a-b132-8df960c3b645.png">
+<img width="1438" alt="Screenshot 2022-05-29 at 7 39 09 PM" src="https://user-images.githubusercontent.com/81583289/170873939-6fbb15e3-ab1f-4437-9da6-6815b88159b2.png">
 
 4. <b> Searching the movie </b>
 - Enter the movie's name you want to get recommendations of 
 
-<img width="1440" alt="Screenshot 2022-05-28 at 5 52 13 PM" src="https://user-images.githubusercontent.com/81583289/170825387-5858da5a-21e9-4b53-8879-cf2db731050b.png">
+<img width="1438" alt="Screenshot 2022-05-29 at 7 39 44 PM" src="https://user-images.githubusercontent.com/81583289/170873955-855b73a1-738f-4ac5-a2f9-f891e7c0198e.png">
 
 - The app takes the input of movie and shows all the details of movie like ratings, genre, release date, runtime etc.
 
-<img width="1440" alt="Screenshot 2022-05-28 at 5 52 28 PM" src="https://user-images.githubusercontent.com/81583289/170825401-a9574d6b-c196-48d7-8f42-c5590baaab69.png">
+<img width="1438" alt="Screenshot 2022-05-29 at 7 40 06 PM" src="https://user-images.githubusercontent.com/81583289/170874013-4e788671-161b-4337-bf61-7136a06e077b.png">
 
 - Shows the top cast of the movie
 
-<img width="1440" alt="Screenshot 2022-05-28 at 5 52 36 PM" src="https://user-images.githubusercontent.com/81583289/170825410-26d9495a-2d27-4406-b0f4-37d92e25a1b3.png">
+<img width="1438" alt="Screenshot 2022-05-29 at 7 40 14 PM" src="https://user-images.githubusercontent.com/81583289/170874030-3140fbb7-2861-4786-9402-9affc770cad2.png">
 
 - It also shows the reviews of the movie which are fetched from IMDb
 
-<img width="1440" alt="Screenshot 2022-05-28 at 5 52 49 PM" src="https://user-images.githubusercontent.com/81583289/170825419-cd05a5fd-7cb7-47af-9ff9-265328f6546d.png">
+<img width="1438" alt="Screenshot 2022-05-29 at 7 40 40 PM" src="https://user-images.githubusercontent.com/81583289/170874049-d5c69dc9-014a-4e8c-b44c-bbb84043c562.png">
 
-5. Recommendation 
+5. <b>Recommendation</b> 
 
 - The app then finally suggests movies similar to the likes of user 
 
-<img width="1440" alt="Screenshot 2022-05-28 at 5 52 57 PM" src="https://user-images.githubusercontent.com/81583289/170825497-2506fd2e-b463-48e0-901d-1d4bd6741f7a.png">
+<img width="1438" alt="Screenshot 2022-05-29 at 7 40 50 PM" src="https://user-images.githubusercontent.com/81583289/170874080-abab24b6-4817-4c1f-8f84-3a7581c92f3f.png">
 
 ## Architecture
 ![architecture](architecture.png)
 
 ## Similarity Score : 
 
-   How does it decide which item is most similar to the item user likes? Here come the similarity scores.
+How does it decide which item is most similar to the item user likes? Here come the similarity scores.
    
-   It is a numerical value ranges between zero to one which helps to determine how much two items are similar to each other on a scale of zero to one. This similarity score is obtained measuring the similarity between the text details of both of the items. So, similarity score is the measure of similarity between given text details of two items. This can be done by cosine-similarity.
+It is a numerical value ranges between zero to one which helps to determine how much two items are similar to each other on a scale of zero to one. This similarity score is obtained measuring the similarity between the text details of both of the items. So, similarity score is the measure of similarity between given text details of two items. This can be done by cosine-similarity.
    
 ## How Cosine Similarity works?
   Cosine similarity is a metric used to measure how similar the documents are irrespective of their size. Mathematically, it measures the cosine of the angle between two vectors projected in a multi-dimensional space. The cosine similarity is advantageous because even if the two similar documents are far apart by the Euclidean distance (due to the size of the document), chances are they may still be oriented closer together. The smaller the angle, higher the cosine similarity.
